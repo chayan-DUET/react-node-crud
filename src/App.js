@@ -6,6 +6,7 @@ import Navbaar from './components/Navbaar';
 import Home from './components/Home';
 import Register from './components/Register';
 import Edit from './components/Edit';
+import Details from './components/Details';
 import {Switch,Route} from "react-router-dom";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/edit/:id" component={Edit} />
-      {/* <Route exact path="/view/:id" component={Details} /> */}
+      <Route exact path="/view/:id" component={Details} />
     </Switch>
     </div>
   );
