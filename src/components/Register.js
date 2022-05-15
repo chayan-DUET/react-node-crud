@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
-/* import { adddata } from './context/ContextProvider'; */
+//import { adddata } from './context/ContextProvider';
 
 const Register = () => {
 
-/*     const { udata, setUdata } = useContext(adddata); */
+    //const { udata, setUdata } = useContext(adddata);
 
     const history = useHistory();
 
@@ -30,13 +30,13 @@ const Register = () => {
     }
 
 
-    /* const addinpdata = async (e) => {
+    const addinpdata = async (e) => {
         e.preventDefault();
 
         const { name, email, work, add, mobile, desc, age } = inpval;
 
-        const res = await fetch("https://crudappreactjs.herokuapp.com/register", {
-            method: "POST",
+        const res = await fetch("http://localhost:8003/register", {
+            method: "POST", 
             headers: {
                 "Content-Type": "application/json"
             },
@@ -48,7 +48,7 @@ const Register = () => {
         const data = await res.json();
         console.log(data);
 
-        if (res.status === 422 || !data) {
+        /* f (res.status === 422 || !data) {
             console.log("error ");
             alert("error");
 
@@ -57,8 +57,8 @@ const Register = () => {
             setUdata(data)
             console.log("data added");
 
-        }
-    } */
+        } */
+    }
 
     return (
         <div className="container">
@@ -94,7 +94,7 @@ const Register = () => {
                         <textarea name="desc" value={inpval.desc} onChange={setdata} className="form-control" id="" cols="30" rows="5"></textarea>
                     </div>
 
-                    <button type="submit"  class="btn btn-primary">Submit</button>
+                    <button type="submit" onClick={addinpdata} class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>

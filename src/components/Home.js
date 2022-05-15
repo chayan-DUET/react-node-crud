@@ -11,18 +11,18 @@ import { updatedata } from './context/ContextProvider' */
 
 const Home = () => {
 
-/*     const [getuserdata, setUserdata] = useState([]);
+    const [getuserdata, setUserdata] = useState([]);
     console.log(getuserdata);
 
-    const { udata, setUdata } = useContext(adddata);
+    /* const { udata, setUdata } = useContext(adddata);
 
     const {updata, setUPdata} = useContext(updatedata);
 
-    const {dltdata, setDLTdata} = useContext(deldata);
+    const {dltdata, setDLTdata} = useContext(deldata); */
 
     const getdata = async () => {
 
-        const res = await fetch("https://crudappreactjs.herokuapp.com/getdata", {
+        const res = await fetch("http://localhost:8003/getdata", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -44,7 +44,7 @@ const Home = () => {
 
     useEffect(() => {
         getdata();
-    }, []) */
+    }, [])
 
     /* const deleteuser = async (id) => {
 
@@ -121,7 +121,7 @@ const Home = () => {
                         </thead>
                         <tbody>
 
-                            {/* {
+                            {
                                 getuserdata.map((element, id) => {
                                     return (
                                         <>
@@ -132,15 +132,15 @@ const Home = () => {
                                                 <td>{element.work}</td>
                                                 <td>{element.mobile}</td>
                                                 <td className="d-flex justify-content-between">
-                                                    <NavLink to={`view/${element._id}`}> <button className="btn btn-success"><RemoveRedEyeIcon /></button></NavLink>
+                                                    {/* <NavLink to={`view/${element._id}`}> <button className="btn btn-success"><RemoveRedEyeIcon /></button></NavLink>
                                                     <NavLink to={`edit/${element._id}`}>  <button className="btn btn-primary"><CreateIcon /></button></NavLink>
-                                                    <button className="btn btn-danger" onClick={() => deleteuser(element._id)}><DeleteOutlineIcon /></button>
+                                                    <button className="btn btn-danger" onClick={() => deleteuser(element._id)}><DeleteOutlineIcon /></button> */}
                                                 </td>
                                             </tr>
                                         </>
                                     )
                                 })
-                            } */}
+                            }
                         </tbody>
                     </table>
 
